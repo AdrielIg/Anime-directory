@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  font-family: "Roboto", sans-serif;
+  color: rgb(228, 228, 228);
+}
+
+body {
+  background: rgb(3, 4, 17);
+  width: 80%;
+  margin: auto;
+  text-align: center;
+}
+.welcome {
+  margin: 2rem;
+}
+
+.welcome h2 {
+  font-size: 3rem;
+  margin: 3rem 0rem;
+}
+.welcome p {
+  font-size: 2rem;
+  opacity: 0.8;
+}
+
+.search-bar {
+  border: 1px solid rgb(68, 67, 67);
+  border-radius: 10px;
+  min-height: 15vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: rgba(6, 8, 34, 0.473);
+  font-size: 2rem;
+  margin: 2rem 0rem;
+}
+.search-bar label {
+  padding: 0rem 1rem;
+}
+.search-bar input {
+  background: rgb(3, 4, 17);
+  outline: none;
+  border: 1px solid rgb(68, 67, 67);
+  border-radius: 10px;
+  padding: 0.4rem;
+  color: white;
+}
+
+.search-bar button {
+  font-weight: 700;
+  color: rgb(228, 228, 228);
+  background: rgba(0, 128, 0, 0.568);
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.anime-center {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 4rem 4rem;
+}
+
+.anime-center .card {
+  background: rgba(6, 8, 34, 0.473);
+  border: 1px solid rgb(68, 67, 67);
+  border-radius: 10px;
+  position: relative;
+  cursor: pointer;
+  overflow-x: hidden;
+}
+
+.screen {
+  height: 100%;
+  width: 100%;
+  opacity: 0.8;
+  background: rgb(14, 15, 65);
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 10px;
+  transform: translateX(110%);
+}
+
+.anime-center .card:hover .screen {
+  transform: translateX(0);
+}
+
+.anime-center .details {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  border: 2px solid rgb(206, 202, 202);
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.2rem;
+  color: rgb(206, 202, 202);
+  background: transparent;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  cursor: pointer;
+}
+.anime-center .card:hover .details {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.container {
+  height: 30rem;
+}
+.container img {
+  height: 100%;
+  pointer-events: none;
+}
+.card .card-footer {
+  font-size: 1.6rem;
+  margin: 1rem;
+  font-weight: 300;
+}
